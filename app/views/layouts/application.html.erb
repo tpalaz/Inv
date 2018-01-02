@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | InvestBlock </title>
+    <%= csrf_meta_tags %>
+	<script src="assets/js/bootstrap/affix.js"></script>
+	
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="110">
+<div class="loader"></div>
+
+<%= render 'layouts/header' unless @disable_nav %>
+<%= render 'investing/test' if @disable_nav %>
+  <%= yield %>
+  </body>
+  
+</html>
