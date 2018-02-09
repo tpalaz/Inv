@@ -6,8 +6,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-
 gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
@@ -23,8 +21,10 @@ gem 'autoprefixer-rails', '~> 7.2', '>= 7.2.5'
 gem 'execjs', '~> 2.7'
 gem 'popper_js', '~> 1.12', '>= 1.12.9'
 
+gem 'pg'
+
 group :production do
-  gem 'pg', '~> 1.0'
+	gem 'pg'
 end
 
 group :development do

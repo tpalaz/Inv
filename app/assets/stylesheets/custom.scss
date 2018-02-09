@@ -24,6 +24,7 @@ html, body {
 } 
 
 
+
 .text{
     text-align:left;
     padding:0 0 0 15px;
@@ -47,10 +48,18 @@ html, body {
 	overflow: hidden;
 }
 
+.fader {
+	    animation: fadein 9s;
+
+}
+
 .chevron {
+	animation: fadein 9s;
 	width: 40px;
 	height: 40px;
 	margin-top: -2em;
+	padding-left: 4px;
+
 }
 
 @media (min-width: 768px){
@@ -72,11 +81,11 @@ h1, h2, h3, h4 {
 }
 }
 
-h5 {
+#content h5 {
     text-rendering: optimizeLegibility;
 	color: #fff;
 	font-family: Work Sans;
-	font-weight: 200;
+	font-weight: 500;
 	font-size: 20px
 }
 
@@ -89,9 +98,11 @@ h5 {
 
 ********************************/
 .bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+    animation: fadein 9s;
+
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
 }
 
 @-moz-keyframes bounce {
@@ -122,6 +133,7 @@ h5 {
     transform: translateY(-15px);
   }
 }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
@@ -143,7 +155,25 @@ h5 {
   }
 }
 
+.splash {
+    animation: fadein 5s;
+}
 
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    16% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /*****************************
                __  _         
   ___ ___ ____/ /_(_)__  ___ 
@@ -156,11 +186,20 @@ section {
     width: 100%;
 }
 
+#crypto {
+	margin-bottom: -50px;
+	margin-top: -50px;
+	padding: 50px;
+  box-shadow: inset 0 -15px 30px -15px #000;
+
+}
+
+
 #services {
-    padding: 112px;
+    padding: 110px;
     display: block;
     background: rgba(215, 215, 215, 0.52);
-
+    box-shadow: inset 0 -15px 30px -15px #000;
 }
 
 
@@ -172,10 +211,12 @@ section {
 }
 
 #home {
+	margin-bottom: -5px;
 	min-height: 35vh;
-	padding: 110px;
+	padding: 100px;
 	width: 100%;
 	background: #fff;
+
 }
 
 #investing {
@@ -260,10 +301,18 @@ section {
 #content {
 	height: 100%;
 	width: 100%;
-	background: #80CBC4;
+	background: #242121;
 	position: relative;
 }
 
+#content p{
+	font-weight: 300px;
+	color: #ffff;
+}
+
+.copyright {
+	font-size: 12px;
+}
 
 @media (max-width: 768px){
 #IB_Square{
@@ -285,6 +334,57 @@ section {
   visibility: hidden;
 }
 
+
+.about {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.about p {
+  margin: 20px auto;
+  font-weight: 300;
+  text-align: justify;
+  width: 580px;
+}
+
+.about-section {
+  background: #ffff;
+  text-align: center;
+  box-shadow: inset 0 -15px 30px -15px #000;
+}
+
+.about-section button {
+  background: none;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: 700;
+  height: 35px;
+  margin-top: 60px;
+  outline: none;
+}
+
+.about-section button i {
+  margin-right: 5px;
+}
+
+.about-section button:hover,
+.header-content button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#coindesk {
+  font-weight: 300;
+}
+
+#coindesk a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.popup {
+  min-height: 50px;
+}
 /*****************************
                __  _         
   ___ ___ ____/ /_(_)__  ___ 
@@ -999,7 +1099,7 @@ a{
 .box {
   -webkit-box-shadow: 0px 12px 6px -6px rgba(41,41,41,0.25);
   -moz-box-shadow: 0px 12px 6px -6px rgba(41,41,41,0.25);
-  box-shadow: 0px 12px 6px -6px rgba(41,41,41,0.25);  padding: 0;
+  box-shadow: 12px 1px 6px 2px rgba(41, 41, 41, 0.25);  padding: 0;
   margin-bottom: 8px;
 }
 
@@ -1031,7 +1131,7 @@ a{
 }
 
 .shape {
-	height: 150px;
+	height: 200px;
 	-webkit-transform: skew(20deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(20deg);
@@ -1116,6 +1216,7 @@ a{
 }
 
 .box p {
+  padding-top: 3%;
   font-weight: 400;
   margin-left: 25px;
 }
@@ -1338,7 +1439,6 @@ a{
   }
 
 }
-
 
 /* ==========================================================
         Navbar Styles
