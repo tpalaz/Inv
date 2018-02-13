@@ -23,7 +23,19 @@ html, body {
 	font-weight: 300;
 } 
 
+.marquee {
+    margin-left: 25%;
+    margin-bottom: -5p;
+    margin-top: 5px;
+    text-align: center;
+    margin-right: 25%;
 
+}
+
+.chartp {
+	text-align: left;
+	font-size: 9px;
+}
 
 .text{
     text-align:left;
@@ -344,7 +356,7 @@ section {
   margin: 20px auto;
   font-weight: 300;
   text-align: justify;
-  width: 580px;
+  max-width: 900px;
 }
 
 .about-section {
@@ -1322,6 +1334,7 @@ a{
 
 .section1_article {
     text-align: center;
+	font-size: 18px;
 }
 
 .section1_article img {

@@ -1,0 +1,6 @@
+<h1>InvestBlock</h1>
+
+<p> <%= @user.name %>,</p>
+
+<p>
+Thanks for checking InvestBlock out.</p>
