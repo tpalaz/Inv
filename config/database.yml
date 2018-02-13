@@ -5,10 +5,12 @@
 #   gem 'sqlite3'
 #
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: test-postgres_development
   pool: 5
-  timeout: 5000
+  username: test-postgres (or your username if PostgreSQL installed by Homebrew)
+  password:
 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
