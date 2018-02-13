@@ -21,10 +21,10 @@ gem 'autoprefixer-rails', '~> 7.2', '>= 7.2.5'
 gem 'execjs', '~> 2.7'
 gem 'popper_js', '~> 1.12', '>= 1.12.9'
 
-gem 'pg'
+gem 'pg', '~> 0.20'
 
 group :production do
-	gem 'pg'
+	gem 'pg', '~> 0.20'
 end
 
 group :development do
