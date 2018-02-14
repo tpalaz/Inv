@@ -1,0 +1,71 @@
+
+<section id="Icontact">
+<div class="container">
+  <div class="row">
+    <h1 class="header-title">Contact</h1>
+    <hr>
+    <div class="col-sm-12" id="parent">
+    	<div class="col-sm-6">
+                <%= image_tag ("https://maps.googleapis.com/maps/api/staticmap?center=Calgary, AB&zoom=14&size=350x300&key=AIzaSyD5h3VO3z8voFvJVuzPcdT6BGvIvEdcy3I") %>
+    	</div>
+
+    	<div class="col-sm-6">
+<%= form_for :message do |message_form| %>
+
+		        <div class="form-group">
+				        <%= message_form.text_field :name, placeholder: "Name", :class => "form-control"%>
+
+		        </div>		    
+		        <div class="form-group form_left">
+				  <%= message_form.email_field :email, placeholder: "Email", :class => "form-control" %>
+		        </div>
+		    
+		      <div class="form-group">
+				  <%= message_form.text_field :phone, placeholder: "Phone No. (Optional)", :class => "form-control"%>
+		      </div>
+
+		      <div class="form-group">
+              <%= message_form.text_area :content, placeholder: "Type your inquiry here", :rows => "5", :class => "form-control textarea-contact"%>
+			 
+		      <br>
+			<%= message_form.submit "Send", :class => "btn btn-primary"%>
+
+		      </div>
+	        <% end %>
+    	</div>
+    </div>
+  </div>
+
+  <div class="container second-portion">
+	<div class="row">
+        <!-- Boxes de Acoes -->
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<h3 class="text-center">Phone</h3>
+					<p>+1 403 000 0000</p>
+									<div class="space"></div>
+
+					</div>
+		</div>
+				
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+						<h3 class="text-center">Address</h3>
+						<p>Calgary, AB.
+						30 BillyHaynes Trail</p>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+						<h3 class="text-center">Email</h3>
+						<p>info@investblock.io</p>
+				<div class="space"></div>
+			</div> 
+		</div>    
+	    
+	</div>
+</div>
+</div>

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get    '/investing'   => 'investing#investing'
+  get '/investing'   => 'investing#investing'
 
-  root 'home#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/" => "home#index", :as => "root"
+
+
+  resources :messages
+  get '/', to: 'messages#new', as: '/'
+  post '/', to: 'messages#create'
 end

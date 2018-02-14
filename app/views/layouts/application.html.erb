@@ -3,7 +3,6 @@
   <head>
     <title><%= yield(:title) %> | InvestBlock </title>
     <%= csrf_meta_tags %>
-	<script src="assets/js/bootstrap/affix.js"></script>
 	
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,12 +10,15 @@
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="110">
 <div class="loader"></div>
-
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 <%= render 'layouts/header' unless @disable_nav %>
 <%= render 'investing/test' if @disable_nav %>
   <%= yield %>
     <div class="container-fluid"> 
-  <%= render 'layouts/footer' %>
+
+<%= render :file => '/messages/new' %>
   <%= debug(params) if Rails.env.development? %> 
 
   </div>

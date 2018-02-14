@@ -60,6 +60,12 @@ var $container = $('.article_center2'),
 	$articles = $container.children('article'),
 	timeout;
 
+var messages = "{{ get_flashed_messages() }}";
+
+    if (typeof messages != 'undefined' && messages != '[]') {
+        $("#basicModal").modal();
+    };
+
 $articles.on('mouseenter', function(event) {
 	var $article = $(this);
 	clearTimeout(timeout);

@@ -1,4 +1,24 @@
 <% provide(:title, "Home") %>
+
+<% if flash[:emailed] %>
+
+
+<div class="modal fade" id="basicModal" aria-labelledby="basicModal" aria-hidden="true">
+  <div id="w">
+    <div id="jumbocont">
+	<div align="center">
+      <!-- Icons source https://dribbble.com/shots/913555-Flat-Web-Elements -->
+	  <% flash[:emailed] %>
+        <h1>Success!</h1>
+        	<div align="center"><img src="https://s22.postimg.org/i5iji9hv1/check.png" alt="checkmark" /></div>
+        <p>We sincerely thank you for reaching out. Alternatively, you may <a href="https://twitter.com/TPalacsko" target="_blank">Tweet</a> me. Keep in mind Foodi is still in early alpha testing;
+		use & changes of the Foodi application at this time are temporary until launch.<br><br>
+		Thank you again for registering. I hope you enjoy your experience while testing the Foodi Web-Application.</p>
+      </div>
+      </div>
+	</div>
+</div>
+<% end %>
 <section id="home">
   <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
