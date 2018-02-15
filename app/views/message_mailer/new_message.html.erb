@@ -1,4 +1,15 @@
-<%= @message.fname %> <%= @message.lname %> ||  < <%= @message.email %> > || Contact by phone : <%= @message.phonecontact %> (0 = no, 1 = yes)|| <%= @message.phone %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+	<%= @message.fname %> <%= @message.lname %> ||  < <%= @message.email %> > || Contact by phone : <%= @message.phonecontact %> (0 = no, 1 = yes)|| <%= @message.phone %>
 <br>
-==========================================================================================================
+<br>
+
+    <p>
 <%= @message.content %>
+    </p>
+  </body>
+</html>
