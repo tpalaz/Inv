@@ -5,7 +5,7 @@ class MessageMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail subject: "[INQUIRY]"
+	mail from: message.email, subject: "[INQUIRY]"
   end
   
   def send_message(message)
