@@ -1246,9 +1246,20 @@ a{
 }
 
 .box p {
+  font-size: 16px;
   padding-top: 3%;
   font-weight: 400;
   margin-left: 25px;
+}
+
+.form-check-label {
+	font-weight: 300; 
+
+}
+
+#inlineFormCheck {
+	margin: 11px 0 0;
+	margin-left: 18px;
 }
 
 /*****************************************************************************************************************/
@@ -1515,13 +1526,45 @@ a{
   padding-bottom: 20px;
 }
 
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
 
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
 
 .navbar-brand {
   padding: 15px;
 }
 
+.col-md-5 {
+	padding-left: 0px;
+	padding-right: 0px;
 
+}
+.col-md-7 {
+	padding-left: 6px;
+	padding-right: 0px;
+
+}
+.col-md-4 {
+	padding-left: 0px;
+	padding-right: 0px;
+
+}
+
+.col-sm-6 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
 
 .section-fill-height {
   display: flex;
