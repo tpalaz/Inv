@@ -1,1 +1,1 @@
-#InvestBlock Capital
+InvestBlock Capital
